@@ -1,7 +1,6 @@
 package model;
 
 public class Product {
-    private int id;
     private String name;
     private String description;
     private String category;
@@ -10,8 +9,7 @@ public class Product {
     private String image_url;
     private boolean active;
 
-    public void setProduct(int id,String name,String description,String category,float price,int stock,String image_url,boolean active){
-        this.id=id;
+    public Product(String name,String description,String category,float price,int stock,String image_url,boolean active){
         this.name=name;
         this.description=description;
         this.category=category;
@@ -19,5 +17,33 @@ public class Product {
         this.stock=stock;
         this.image_url=image_url;
         this.active=active;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public String getDescription(){
+        return this.description;
+    }
+
+    public String getCategory(){
+        return this.category;
+    }
+
+    public float getPrice(){
+        return this.price;
+    }
+
+    public int getStock(){
+        return this.stock;
+    }
+
+    public String getImage_url(){
+        return this.image_url;
+    }
+
+    public boolean getActive(){
+        return this.active;
     }
 }
