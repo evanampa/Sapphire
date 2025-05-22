@@ -84,6 +84,7 @@ public class Main {
             }
 
             conn.close();
+            scanner.close();
         } catch (SQLException e) {
             System.out.println("Failed to connect to database: " + e.getMessage());
             e.printStackTrace();
