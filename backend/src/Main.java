@@ -40,6 +40,8 @@ public class Main {
         Product pr= new Product(name,description,category,Float.parseFloat(price), Integer.parseInt(stock),image_url,activeBool);
 
         ProductDAO.addNewProduct(pr);
+        scanner.close();
+
     }
 
     static void deleteProduct() throws SQLException {
@@ -51,6 +53,7 @@ public class Main {
         name = scanner.nextLine();
 
         ProductDAO.deleteProduct(name);
+        scanner.close();
     }
 
     public static void main(String[] args) {
