@@ -1,6 +1,6 @@
 const menuOpenButton = document.querySelector("#menu-open-button");
 const menuCloseButton = document.querySelector("#menu-close-button");
-
+const navLinks = document.querySelectorAll(".nav-menu .nav-link");
 
 menuOpenButton.addEventListener("click", () => {
   //Toggle menu visibility
@@ -8,3 +8,7 @@ menuOpenButton.addEventListener("click", () => {
 });
 
 menuCloseButton.addEventListener("click", () => menuOpenButton.click());
+
+navLinks.forEach( link => {
+  link.addEventListener("click", () => menuOpenButton.click());
+});
