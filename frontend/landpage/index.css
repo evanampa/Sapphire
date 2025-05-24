@@ -66,6 +66,9 @@ img {
 
 /* Navbar styling */
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
   background: var(--primary-color);
 }
 
@@ -103,4 +106,166 @@ header .navbar {
 .navbar .nav-menu .nav-link:hover {
   color: var(--primary-color);
   background: var(--secondary-color);
+}
+
+.navbar :where(#menu-close-button, #menu-open-button){
+  display: none;
+}
+
+/* Hero section */
+.hero-section {
+  min-height: 100vh;
+  background-image: url(../img/dark-painting.png);
+  background-position: center; 
+  background-size: cover;
+}
+
+.hero-section .section-content {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--white-color);
+  justify-content: space-between;
+}
+
+.hero-section .hero-details .title {
+  font-size: var(--font-size-xxl);
+  color: var(--secondary-color);
+  font-family: "Miniver", "sans-serif";
+}
+.hero-section .hero-details .subtitle {
+  margin-top: 8px;
+  max-width: 70%;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-wight-semibold);
+}
+
+.hero-section .hero-details .description {
+  margin: 24px 0 40px;
+  max-width: 70%;
+  font-size: var(--font-size-m);
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  background: rgba(33, 33, 33, 0.9); 
+  color: #f1f1f1;
+  padding: 20px;
+  border-radius: 7px;
+  width: 30%;
+  min-height: 40%; /* Ελάχιστο ύψος για μικρότερα κείμενα */
+}
+
+
+.hero-section .hero-details .buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-section .hero-details .button {
+  padding: 10px 26px;
+  border: 2px solid transparent;
+  color: var(--dark-color);
+  border-radius: var(--border-radius-m);
+  background: var(--secondary-color);
+  font-weight: var(--font-weight-medium);
+  transition: 0.3s ease;
+}
+
+.hero-section .hero-details .button:hover {
+  color: var(--white-color);
+  border-color: var(--white-color);
+  background: transparent;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px){
+  :root{
+    --font-size-m: 1rem;
+    --font-size-l: 1.3rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 1.8rem;
+  }
+
+  body.show-mobile-menu header::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar :where(#menu-close-button, #menu-open-button){
+    display: block;
+    font-size: var(--font-size-l);
+  }
+
+  .navbar #menu-close-button {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+  .navbar #menu-open-button {
+    color: var(--white-color);
+  }
+  .navbar .nav-menu{
+    display: block;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    background: var(--secondary-color);
+    transition: left 0.2s ease;
+  }
+
+  body.show-mobile-menu .navbar .nav-menu {
+    left: 0;
+  }
+  .navbar .nav-menu .nav-link{
+    color: var(--dark-color);
+    display: block;
+    margin-top: 17px;
+    font-size: var(--font-size-l);
+  }
+
+  .navbar .nav-menu .nav-link {
+    padding: 10px 26px;
+    border: 2px solid transparent;
+    color: var(--dark-color);
+    border-radius: var(--border-radius-m);
+    background: var(--secondary-color);
+    font-weight: var(--font-weight-medium);
+    transition: 0.3s ease;
+  }
+  .navbar .nav-menu .nav-link:hover {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+  }
+
+  .hero-section .section-content {
+    gap: 50px;
+    text-align: center;
+    padding: 30px 20px 20px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .hero-section .hero-details :is(.subtitle, .description) {
+    max-width: 100%;
+  }
+
+  .hero-section .hero-details .buttons{
+    justify-content: center;
+  }
 }
