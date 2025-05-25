@@ -2,5 +2,22 @@
   "java.project.referencedLibraries": [
     "lib/**/*.jar",
     "c:\\Users\\user\\AppData\\Local\\JetBrains\\mysql-connector-j-9.3.0\\mysql-connector-j-9.3.0\\mysql-connector-j-9.3.0.jar"
+  ],
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "MyConnection",
+      "database": "ecommerce",
+      "username": "root",
+      "password": "ea18069590",
+      "connectionTimeout": 30
+    }
   ]
 }

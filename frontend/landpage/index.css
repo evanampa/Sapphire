@@ -289,6 +289,29 @@ header .navbar {
   font-size: var(--font-size-m);
 }
 
+.product-section .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.product-section .button {
+  padding: 20px 50px;
+  border: 2px solid transparent;
+  color: var(--dark-color);
+  border-radius: var(--border-radius-m);
+  background: var(--secondary-color);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-l);
+  transition: 0.3s ease;
+}
+
+.product-section .button:hover {
+  color: var(--white-color);
+  border-color: var(--white-color);
+  background: transparent;
+}
+
 /* Contact Section */
 .contact-section {
   padding: 50px 0 100px;
