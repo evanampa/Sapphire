@@ -146,6 +146,29 @@ header .navbar {
 .navbar :where(#menu-close-button, #menu-open-button){
   display: none;
 }
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+}
+
+.hero-section .section-content {
+  display: flex;
+  min-height: 100vh;  
+  align-items: center;
+  color: var(--dark-color);
+  justify-content: space-between;
+}
+
+.hero-section .hero-details .title {
+  font-size: var(--font-size-xl);
+  color: var(--secondary-color);
+  font-family: "Miniver", "sans-serif";
+}
+.hero-section .hero-details .subtitle {
+  margin-top: 8px;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-wight-semibold);
+}
 
 /* Footer Section */
 .footer-section {
